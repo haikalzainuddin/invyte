@@ -150,6 +150,30 @@ function invyte_scripts() {
 add_action( 'wp_enqueue_scripts', 'invyte_scripts' );
 
 /**
+ * Enqueue scripts and styles.
+ */
+function invyte_custom_scripts()
+{
+    // Register the script like this for a theme:
+    wp_register_script( 'custom-script', get_stylesheet_directory_uri() . '/assets/js/minified/invyte.js' );
+ 
+    // For either a plugin or a theme, you can then enqueue the script:
+    wp_enqueue_script( 'custom-script' );
+}
+
+function invyte_custom_styles() {
+    // Register the script like this for a theme:
+    wp_register_style( 'custom-style', get_stylesheet_directory_uri() . '/assets/stylesheets/css/main.css' );
+
+    // For either a plugin or a theme, you can then enqueue the script:
+    wp_enqueue_style( 'custom-style' );
+}
+
+
+add_action( 'wp_enqueue_scripts', 'invyte_custom_scripts' );
+add_action( 'wp_enqueue_scripts', 'invyte_custom_styles' );
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';

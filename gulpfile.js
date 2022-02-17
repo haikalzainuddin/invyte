@@ -35,7 +35,7 @@ function jsTask(){
         files.jsPath
         //,'!' + 'includes/js/jquery.min.js', // to exclude any specific files
         ])
-        .pipe(concat('minified/spazebar.js'))
+        .pipe(concat('minified/invyte.js'))
         .pipe(uglify())
         .pipe(dest('assets/js')
     );
