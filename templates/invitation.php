@@ -11,7 +11,7 @@
 <div class="invitation-page">
     <div class="invitation-page-wrapper">
         <div class="invitation-content">
-            This is the inivitation content
+            <?php include get_template_directory() . '/modules/invitation-main.php'; ?>
         </div>
         <div class="invitation-footer">
             <div class="inivitation-footer-wrapper invitation-btns">

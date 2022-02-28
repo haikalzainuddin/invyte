@@ -14,7 +14,6 @@
             margin: 0 auto;
             max-width: 500px;
             background: #fff;
-            border-radius: 10px;
             position: relative;
         }
     }
@@ -61,6 +60,37 @@
             .fa {
                 font-size: 20px;
             }
+        }
+    }
+    &-content {
+        height: calc(100% - 78px);
+    }
+    &-main {
+        height: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: url('../../../assets/images/bg-1.jpg');
+        background-size: cover;
+        img {
+            width: 70%;
+        }
+        h1 {
+            margin: 15px 0;
+        }
+        h4 {
+            margin: 0 0 10px;
+            font-size: 20px;
+            + h4 {
+                margin-bottom: 20px;
+            }
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+        .design {
+            margin: 30px 0;
         }
     }
 }
