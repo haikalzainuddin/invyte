@@ -1,4 +1,4 @@
-<div class="invitation-main">
+<div class="invitation-main section">
     <h4>Walimatulurus</h4>
     <div class="design">
         <img src="/wp-content/themes/invyte/assets/svg/kerawang-1.svg">

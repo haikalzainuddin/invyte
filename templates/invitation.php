@@ -12,6 +12,8 @@
     <div class="invitation-page-wrapper">
         <div class="invitation-content">
             <?php include get_template_directory() . '/modules/invitation-main.php'; ?>
+            <?php include get_template_directory() . '/modules/invitation-intro.php'; ?>
+            <?php include get_template_directory() . '/modules/invitation-foe.php'; ?>
         </div>
         <div class="invitation-footer">
             <div class="inivitation-footer-wrapper invitation-btns">
@@ -37,37 +39,11 @@
                 </a>
             </div>
         </div>
-        <div class="invitation-popup invitation-rsvp" data-popup="rsvp">
-            <span class="popup-close">
-            <i class="fa fa-3x fa-times"></i>
-            </span>
-            <h3>RSVP</h3>
-            <?php echo do_shortcode('[contact-form-7 id="17" title="RSVP Form"]'); ?>
-        </div>
-        <div class="invitation-popup invitation-calendar" data-popup="calendar">
-            <span class="popup-close">
-            <i class="fa fa-3x fa-times"></i>
-            </span>
-            <h3>Calendar</h3>
-        </div>
-        <div class="invitation-popup invitation-contact" data-popup="contact">
-            <span class="popup-close">
-            <i class="fa fa-3x fa-times"></i>
-            </span>
-            <h3>Contact</h3>
-        </div>
-        <div class="invitation-popup invitation-location" data-popup="location">
-            <span class="popup-close">
-            <i class="fa fa-3x fa-times"></i>
-            </span>
-            <h3>Location</h3>
-        </div>
-        <div class="invitation-popup invitation-sop" data-popup="sop">
-            <span class="popup-close">
-            <i class="fa fa-3x fa-times"></i>
-            </span>
-            <h3>SOP</h3>
-        </div>
+        <?php include get_template_directory() . '/modules/invitation-tab-rsvp.php'; ?>
+        <?php include get_template_directory() . '/modules/invitation-tab-calendar.php'; ?>
+        <?php include get_template_directory() . '/modules/invitation-tab-contact.php'; ?>
+        <?php include get_template_directory() . '/modules/invitation-tab-location.php'; ?>
+        <?php include get_template_directory() . '/modules/invitation-tab-sop.php'; ?>
     </div>
 </div>
 

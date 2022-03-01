@@ -23,7 +23,7 @@ $(function(){
         })
 
         popup_close.on('click', function(e){
-            $(this).parent().removeClass('show-popup')
+            $(this).parent().parent().removeClass('show-popup')
         })
     }
 })

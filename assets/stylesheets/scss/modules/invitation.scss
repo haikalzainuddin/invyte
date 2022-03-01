@@ -10,7 +10,6 @@
     &-page {
         background: #818181;
         &-wrapper {
-            height: 100vh;
             margin: 0 auto;
             max-width: 500px;
             background: #fff;
@@ -25,10 +24,46 @@
         left: 0;
         width: 100%;
         height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         @include trans;
         &.show-popup {
             opacity: 1;
             visibility: visible;
+        }
+        > div {
+            background: #fff;
+            border: 1px solid black;
+            padding: 15px;
+            border-radius: 10px;
+            width: calc(100% - 35px);
+            position: relative;
+            .popup-close {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+            }
+            h3 {
+                margin: 0;
+                text-align: center;
+            }
+            .waze, .maps {
+                width: 100%;
+                text-align: center;
+                display: block;
+                padding: 10px;
+                border-radius: 5px;
+                border: 1px solid black;
+                text-decoration: none;
+                background: #7ec0ee;
+                color: #fff;
+            }
+            .maps {
+                margin-top: 10px;
+                background: #000;
+            }
         }
     }
     &-footer {
@@ -64,33 +99,34 @@
     }
     &-content {
         height: calc(100% - 78px);
-    }
-    &-main {
-        height: 100%;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        background: url('../../../assets/images/bg-1.jpg');
-        background-size: cover;
-        img {
-            width: 70%;
-        }
-        h1 {
-            margin: 15px 0;
-        }
-        h4 {
-            margin: 0 0 10px;
-            font-size: 20px;
-            + h4 {
-                margin-bottom: 20px;
+        .section {
+            height: 100vh;
+            text-align: center;
+            padding: 0 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: url('../../../assets/images/bg-1.jpg');
+            background-size: cover;
+            img {
+                width: 70%;
             }
-            &:last-of-type {
-                margin-bottom: 0;
+            h1 {
+                margin: 15px 0;
             }
-        }
-        .design {
-            margin: 30px 0;
+            h4 {
+                margin: 0 0 10px;
+                font-size: 20px;
+                + h4 {
+                    margin-bottom: 20px;
+                }
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+            .design {
+                margin: 30px 0;
+            }
         }
     }
 }
